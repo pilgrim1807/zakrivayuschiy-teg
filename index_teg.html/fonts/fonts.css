@@ -1,0 +1,41 @@
+@font-face {
+font-family: 'PressStart2P';
+src: url(./PressStart2PRegular.woff) format('woff');
+font-weight: normal;
+font-display: swap;
+}
+
+@font-face {
+    font-family: 'PressStart2P';
+    src: url(./PressStart2PRegular.woff2) format('woff2');
+    font-weight: normal;
+    font-display: swap;
+    }
+
+@font-face {
+    font-family: 'inter';
+    src: url(./interregular.woff) format('woff');
+    font-weight: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'inter';
+    src: url(./IBMPlexMono-Regular.woff) format('woff2');
+    font-weight: normal;
+    font-display: swap;
+    }
+
+    @font-face {
+        font-family: 'inter';
+        src: url(./interbold.woff) format('woff');
+        font-weight: bold;
+        font-display: swap;
+    }
+    
+    @font-face {
+        font-family: 'inter';
+        src: url(./interbold.woff2) format('woff2');
+        font-weight: bold;
+        font-display: swap;
+        }

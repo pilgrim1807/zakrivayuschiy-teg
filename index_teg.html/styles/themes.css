@@ -1,0 +1,21 @@
+.page.theme-dark {
+  --main-text-color: #00cc14;
+  --main-border-color: #00cc14;
+  --main-bg-color: #000000;
+  --theme-pattern: url("../svg/pattern-dark.svg");
+  --disabled-text-color: rgba(0, 204, 20, 0.6);
+}
+
+.page.theme-auto {
+  --main-text-color: #000000;
+  --main-border-color: #000000;
+  --main-bg-color: #ffff;
+  --theme-pattern: url("../svg/pattern-light.svg");
+}
+
+.page.theme-light {
+  --main-text-color: #000000;
+  --main-border-color: #000000;
+  --main-bg-color: #ffff;
+  --theme-pattern: url("../svg/pattern-light.svg");
+}

@@ -1,0 +1,128 @@
+/* Здесь вы напишете основную часть стилей страницы.
+
+Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
+✦ theme-dark — класс тёмной темы
+✦ theme-light — класс светлой темы
+✦ like-icon — для svg-иконки анимированного сердца
+✦ card__like-button — для кнопки Like рядом с иконкой
+✦ card__icon-button — для кнопки, оборачивающей иконку
+✦ card__icon-button — для кнопки, оборачивающей иконку
+✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
+✦ button__text — для обозначения текстового элемента внутри кнопки
+
+Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
+
+*/
+
+.page {
+  min-inline-size: 320px;
+  min-block-size: 100dvb;
+}
+
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.header {
+  height: 368px;
+  border: 2px solid var(--main-border-color);
+  margin-top: 100px;
+  text-align: center;
+  background-color: var(--main-bg-color);
+}
+
+.logo {
+  font-family: var(--header-font-family);
+  font-size: clamp(3.063rem, 2.71rem + 1.5vw, 4.063rem);
+  margin-top: 130px;
+  color: var(--main-text-color);
+}
+
+.title__logo {
+  font-family: var(--header-font-family);
+  padding: 20px;
+  font-size: clamp(0.875rem, 0.677rem + 0.85vw, 1.438rem);
+  color: var(--main-text-color);
+}
+
+.theme-menu {
+  justify-content: center;
+  place-items: center;
+}
+
+.theme-menu__item {
+  padding-top: 7px;
+}
+
+.theme-menu__button {
+  cursor: pointer;
+  font-family: "PressStart2P";
+  border: none;
+  color: var(--main-text-color);
+}
+
+.theme-menu__button:hover {
+  border-bottom: 2px solid var(--disabled-text-color);
+}
+
+.card {
+  margin-top: 100px;
+  border: 2px solid var(--main-text-color);
+}
+
+.card__like {
+  height: 224px;
+}
+
+.title__card {
+  background-color: var(--main-bg-color);
+  font-size: 19px;
+  font-family: var(--main-font-family);
+  padding: 5px;
+  color: var(--main-text-color);
+  border-bottom: 2px solid var(--main-text-color);
+}
+
+.text__block {
+  font-family: var(--main-font-family);
+  padding: 10px 20px 10px 20px;
+  font-weight: 400;
+  font-size: var(--main-text-size);
+  color: var(--main-text-color);
+}
+
+.like-icon {
+  color: var(--main-text-color);
+  float: right;
+}
+
+.card__like-button {
+  float: right;
+  margin-right: 25px;
+  font-family: var(--header-font-family);
+  width: 130px;
+  height: 38px;
+  color: var(--main-text-color);
+  border: 2px solid var(--main-text-color);
+}
+
+.save__button {
+  margin: auto;
+  padding: 18px 20px;
+  font-family: var(--header-font-family);
+  size: 14px;
+  font-weight: 400;
+  margin-top: 50px;
+  color: var(--main-text-color);
+  border: 2px solid var(--main-text-color);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.final__button {
+  height: 20vh;
+}
+
+

@@ -1,0 +1,12 @@
+/* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+  --header-font-family: "PressStart2P";
+  --main-font-family: "inter";
+  --special-font-family: "inter";
+  --main-text-color: #000000;
+  --main-border-color: #000000;
+  --main-bg-color: #ffff;
+  --theme-pattern: url("../svg/pattern-light.svg");
+  --main-text-size: 18px;
+  --disabled-text-color: rgba(0, 0, 0, 0.6);
+}
