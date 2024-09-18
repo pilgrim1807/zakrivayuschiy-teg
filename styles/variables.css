@@ -1,1 +1,15 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+  --header-font-family: "PressStart2P", fantasy;
+  --main-font-family: "inter", sans-serif;
+  --main-text-color: #000000;
+  --main-border-color: #000000;
+  --main-bg-color: #ffff;
+  --theme-pattern: url("../svg/pattern-light.svg");
+  --main-text-size: 18px;
+  --disabled-text-color: rgba(0, 0, 0, 0.6);
+  --main-gap: 10px;
+  --normal-weight: 400;
+  --bold-weight: 700;
+  --max-width: 700px;
+}
