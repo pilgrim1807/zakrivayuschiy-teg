@@ -6,7 +6,6 @@
 ✦ like-icon — для svg-иконки анимированного сердца
 ✦ card__like-button — для кнопки Like рядом с иконкой
 ✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
 ✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
@@ -17,4 +16,379 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  background: var(--theme-pattern) 0 0 / 4px 4px repeat;
+  position: absolute;
+  background-attachment: fixed;
+  display: grid;
+  grid-template-columns: 1fr 48.7% 1fr;
+  font-family: var(--main-font-family);
+  font-variation-settings: "wght" var(--normal-font-weight);
 }
+
+@media (width <= 375px) {
+  .page {
+    display: grid;
+    grid-template-columns: 1fr 98% 1fr;
+  }
+}
+
+.content {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+@media (width <= 375px) {
+  .content {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+
+.header {
+  outline: 2px solid var(--main-border-color);
+  text-align: center;
+  background-color: var(--main-bg-color);
+  margin-block-start: calc(10 * var(--main-gap));
+  inline-size: clamp(320px, 100%, var(--max-width));
+  padding: clamp(120px, 32dvi, 139px) 0 12px;
+}
+
+@media (width <= 375px) {
+  .header {
+    margin-inline-start: calc(0.2 * var(--main-gap));
+    margin-block-start: calc(10.1 * var(--main-gap));
+    inline-size: clamp(32px, 100%, var(--max-width));
+    padding: clamp(26px, 32dvi, 130px) 0 12px;
+  }
+}
+
+.logo {
+  font-family: var(--header-font-family);
+  font-size: clamp(3.063rem, 2.71rem + 1.5vw, 4.063rem);
+  color: var(--main-text-color);
+  font-variation-settings: "wght" 850;
+}
+
+@media (width <= 375px) {
+  .logo {
+  font-size: clamp(1.875rem, -5.0341rem + 34.5455vw, 3.0625rem);
+  margin-block-start: calc(0.09 * var(--main-gap));
+  margin-inline-start: calc(0 * var(--main-gap));
+  }
+}
+
+.title__logo {
+  font-family: var(--header-font-family);
+  text-transform: uppercase;
+  padding: calc(1.9 * var(--main-gap)) 0 calc(2.4 * var(--main-gap)) 0;
+  font-size: clamp(0.875rem, 0.677rem + 0.85vw, 1.438rem);
+  color: var(--main-text-color);
+}
+
+@media (width <= 375px) {
+  .title__logo {
+    padding: calc(2 * var(--main-gap)) 0 calc(2.336 * var(--main-gap)) 0;
+  }
+}
+
+.theme-menu {
+  justify-content: center;
+  place-items: center;
+}
+
+.theme-menu__item {
+  padding: 0 1px 8px 5.3px;
+}
+
+@media (width <= 375px) {
+  .theme-menu__item {
+    padding: 0 1px 8.6px 7.7px;
+  }
+}
+
+.theme-menu__button {
+  cursor: pointer;
+  font-family: "PressStart2P";
+  border: none;
+  color: var(--main-text-color);
+  text-transform: uppercase;
+  font-size: 14px;
+  background-color: transparent;
+}
+
+.theme-menu__button::after {
+  content: "";
+  display: block;
+  position: relative;
+  background-color: var(--main-text-color);
+  opacity: 0.6;
+  height: 2px;
+  padding-top: 1px;
+  transform-origin: left;
+  transform: scaleX(0);
+  width: 100%;
+}
+
+.theme-menu__button:focus-visible::after {
+  transition: 0.3s ease-in-out;
+  transform: scaleX(1);
+}
+
+.theme-menu__button:focus {
+  outline: none;
+}
+
+.theme-menu__button:disabled {
+  pointer-events: none;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+.theme-menu__button:disabled::before {
+  content: "▶";
+  position: absolute;
+  margin-inline-start: calc(-2.4 * var(--main-gap));
+  animation-name: move;
+  animation-duration: 0.5s;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+} 
+
+@media (width <= 375px) {
+  .theme-menu__button:disabled::before {
+    margin-inline-start: calc(-2 * var(--main-gap));
+  }
+}
+
+@keyframes move {
+  from {
+    padding-right: 2px;
+  }
+
+  to {
+    padding-left: 4px;
+  }
+}
+
+.theme-menu__button:hover {
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+.theme-menu__button-auto {
+  padding: 0 13px 0 0;
+}
+
+@media (width <= 375px) {
+  .theme-menu__button-auto {
+    padding: 0 14px 0 0;
+  }
+}
+
+.theme-menu__button-light {
+  margin-inline-end: calc(-1.6 * var(--main-gap));
+}
+
+@media (width <= 375px) {
+  .theme-menu__button-light {
+    margin-inline-end: calc(-1.4 * var(--main-gap));
+  }
+}
+
+.card {
+  margin-block-start: calc(10.3 * var(--main-gap));
+  border: 2px solid var(--main-text-color);
+}
+
+.card__like {
+  block-size: 23.8vh;
+  background-color: var(--main-bg-color);
+  margin-block-start: calc(-0.4 * var(--main-gap));
+  border-top: 2px solid var(--main-text-color);
+}
+
+@media (width <= 375px) {
+  .card__like {
+    block-size: 35.3vh;
+    margin-block-start: calc(-0.4 * var(--main-gap));
+  }
+}
+
+.title__card {
+  background-color: var(--main-bg-color);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.78px;
+  font-family: var(--main-font-family);
+  padding: 5px 0 0 10px;
+  color: var(--main-text-color);
+  border-bottom: 2px solid var(--main-text-color);
+}
+
+.image {
+  inline-size: 100%;
+}
+
+.text__block {
+  font-family: var(--main-font-family);
+  padding: 29px 20px 0 26px;
+  font-weight: var( --normal-weight);
+  font-size: var(--main-text-size);
+  color: var(--main-text-color);
+  line-height: 1.15;
+}
+
+@media (width <= 375px) {
+  .text__block {
+    padding: 28px 24px 0 25px;
+    inline-size: clamp(320px, 100%, var(--max-width));
+    line-height: 21px;
+  }
+}
+
+@media (width <= 375px) {
+  .text__blocks {
+    padding: 3px 0 0 0;
+  }
+}
+
+.card__controls {
+display: flex;
+justify-content: end;
+margin-block-start: calc(2.3* var(--main-gap));
+margin-inline-end: calc(2.6 * var(--main-gap));
+}
+
+@media (width <= 375px) {
+  .card__controls {
+    margin-block-start: calc(2.36 * var(--main-gap));
+    margin-inline-end: calc(2.14 * var(--main-gap));
+    }
+}
+
+.card__like-button {
+  inline-size: 130px;
+  block-size: 38px;
+  position: relative;
+  border: 2px solid var(--main-border-color);
+  background-color: var(--main-bg-color);
+  transition: 1s ease;
+  cursor: pointer;
+  overflow: hidden;
+  padding-block-start: 5px;
+}
+
+.footer__button-save {
+  text-align: center;
+  position: relative;
+  inline-size: 339px;
+  block-size: 55px;
+  font-weight: 400;
+  background-color: var(--main-bg-color);
+  border: 2px solid var(--main-text-color);
+  margin-block-start: calc(5 * var(--main-gap));
+  margin-inline-start: calc(18.2 * var(--main-gap));
+  cursor: pointer;
+  overflow: hidden;
+  inset-inline-start: -4px;
+}  
+
+@media (width <= 375px) {
+  .footer__button-save {
+    inline-size: 310px;
+    block-size: 83px;
+    margin-block-start: calc(5 * var(--main-gap));
+    margin-inline-start: calc(3.7 * var(--main-gap));
+    inset-inline-start: -4px;
+  }
+}
+
+.card__like-button:focus,
+.card__like-button:focus-visible,
+.footer__button-save:focus,
+.footer__button-save:focus-visible {
+  outline: none;
+  box-shadow: 4px 4px 0 0 var(--main-border-color);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.card__like-button::before,
+.footer__button-save::before {
+	content:'';
+	position: absolute;
+  top: 0;
+  left: 0;
+	background-color: var(--main-border-color);
+  width: 100%;
+  height: 100%;
+  translate: -100%;
+  transition: 0.5s ease-in-out;
+  transform-origin: left;
+}
+
+.card__like-button:hover::before,
+.footer__button-save:hover::before {
+  translate: 0%;
+}
+
+.card__like-button:hover {
+  transition: 1s ease;
+  color: var(--main-border-color);
+  cursor: pointer;
+}
+
+.footer__button-save:hover {
+  transition: 1s ease;
+  color: var(--main-border-color);
+  cursor: pointer;
+}
+
+.button__text {
+  position: relative;
+  z-index: 1;
+  font-family: var( --header-font-family);
+  font-size: 14px;
+  font-weight: var(--normal-font-weight);
+  color: var(--main-text-color);
+  cursor: pointer;
+  transition: 1s ease-in-out;
+}
+
+.button__text:hover {
+  color: var(--main-bg-color);
+  transition: 1s ease-in-out;
+  cursor: pointer;
+}
+
+.floppy {
+  position: relative;
+  block-size: 21px;
+  inline-size: 21px;
+  z-index: 1;
+  inset-inline-start: 5px;
+  inset-block-start: 3px;
+}
+
+@media (width <= 375px) {
+  .floppy {
+    display: flex;
+    inset-inline-start: calc(13.91 * var(--main-gap));
+    inset-block-start: calc(0.17 * var(--main-gap));
+    block-size: 28px;
+    inline-size: 28px;
+    margin-block-end: 7.6px;
+  }
+}
+
+.footer {
+  block-size: 15dvb;
+}
+
+@media (width <= 375px) {
+  .footer {
+    block-size: 24dvb;
+  }
+}
+

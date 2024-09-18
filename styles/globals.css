@@ -6,24 +6,24 @@
 *::after,
 *::before {
   box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ul,
-ol,
-li {
   margin: 0;
   padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.page.theme-dark {
+  background-color: var(--main-bg-color);
+}
+
+.page.theme-light {
+  background-color: var(--main-bg-color);
+}
+
+.page.theme-auto {
+  background-color: var(--main-bg-color);
 }
 
 a {
